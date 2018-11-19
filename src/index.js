@@ -6,6 +6,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);//passing props to parents constructor
         this.state = { lat: null, errorMsg: '' };
+        
         window.navigator.geolocation.getCurrentPosition(
             position => {
                 this.setState({ lat: position.coords.latitude })
